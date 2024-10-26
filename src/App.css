@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap');
+
+.App {
+  
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 70px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.App-header {
+  background-color: #000;
+  height: 300px;
+  padding: 20px;
+  color: red;
+  font-family: 'Bungee Tint', sans-serif; /* Use Roboto from Google Fonts */
+  font-size: 34px;
+}
+
+.App-intro {
+  font-size: large;
+}
+/* Readme styles */
+/* Markdown content styles */
+.markdown-content {
+  margin-left: 250px; /* Adds 50px space from the left */
+  bottom: 20px;/* You can also use padding if you prefer: */
+  /* padding-left: 50px; */
+}
+/* src/FooterCredit.css */
+
+.footer-credit {
+  //position: fixed;
+  bottom: 10px; /* Adjust this as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px; /* Adjust as needed */
+  color: #555; /* Adjust color as needed */
+  margin-top: 50px; /* Add margin to create space above */
+  margin-bottom: 20px;
+  margin-left: 50%;
+}
+
+
+/* Floating menu styles */
+.floating-menu {
+  position: fixed;
+  top: 350px;
+  left: 20px;
+  background-color: rgba(51, 51, 51, 0.8); /* Dark background with light transparency */
+  color: white;
+  padding: 10px;
+  border-radius: 15px; /* Rounded corners */
+  max-height: 80vh;
+  overflow-y: auto;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds shadow for better visibility */
+}
+
+.floating-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.floating-menu li {
+  margin: 5px 0;
+}
+
+.floating-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.floating-menu a:hover {
+  text-decoration: underline;
+}
+
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
