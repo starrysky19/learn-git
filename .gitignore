@@ -1,7 +1,14 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+# Ignore node_modules
+node_modules/
+
+# Ignore build and distribution files
+build/
+
+# Ignore log files
+*.log
 
 # testing
 /coverage
