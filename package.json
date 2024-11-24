@@ -24,12 +24,15 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.4",
-    "@babel/preset-react": "^7.24.7"
+    "@babel/preset-react": "^7.24.7",
+    "gh-pages": "^6.2.0"
   },
   "browserslist": {
     "production": [
@@ -42,5 +45,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "homepage": "https://starrysky19.github.io/learn-git"
 }

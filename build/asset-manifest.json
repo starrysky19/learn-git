@@ -1,7 +1,16 @@
 {
-  "main.css": "static/css/main.3f2f01a6.css",
-  "main.css.map": "static/css/main.3f2f01a6.css.map",
-  "main.js": "static/js/main.feb6a957.js",
-  "main.js.map": "static/js/main.feb6a957.js.map",
-  "static/media/git-github.gif": "static/media/git-github.3ef3d9fb.gif"
+  "files": {
+    "main.css": "/learn-git/static/css/main.f5b46e8c.css",
+    "main.js": "/learn-git/static/js/main.2558b120.js",
+    "static/media/git-github.gif": "/learn-git/static/media/git-github.24364737ba45b203a5ab.gif",
+    "static/media/background.jpg": "/learn-git/static/media/background.e4298aefb0155c84d25a.jpg",
+    "static/media/gitcheats.md": "/learn-git/static/media/gitcheats.88f39d584c0a3d6ab685.md",
+    "index.html": "/learn-git/index.html",
+    "main.f5b46e8c.css.map": "/learn-git/static/css/main.f5b46e8c.css.map",
+    "main.2558b120.js.map": "/learn-git/static/js/main.2558b120.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f5b46e8c.css",
+    "static/js/main.2558b120.js"
+  ]
 }
