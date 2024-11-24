@@ -1,14 +1,9 @@
 
-# Git Cheat Sheet English
-
-
-<hr>
-
 ## Setup
 
 ##### Show current configuration:
 ```
-$ git config --list
+git config --list
 ```
 ##### Show repository configuration:
 ```
@@ -22,30 +17,28 @@ git config --global --list
 
 ##### Show system configuration:
 ```
-$ git config --system --list
+git config --system --list
 ```
 
 ##### Set a name that is identifiable for credit when review version history:
 ```
-$ git config --global user.name "[firstname lastname]"
+git config --global user.name "[firstname lastname]"
 ```
 
 ##### Set an email address that will be associated with each history marker:
 ```
-$ git config --global user.email "[valid-email]"
+git config --global user.email "[valid-email]"
 ```
 
 ##### Set automatic command line coloring for Git for easy reviewing:
 ```
-$ git config --global color.ui auto
+git config --global color.ui auto
 ```
 
 ##### Set global editor for commit
 ```
-$ git config --global core.editor vi
+git config --global core.editor vi
 ```
-
-<hr>
 
 ## Configuration Files
 
@@ -64,8 +57,6 @@ $ git config --global core.editor vi
 /etc/gitconfig
 ```
 
-<hr>
-
 ## Create
 
 ##### Clone an existing repository:
@@ -75,96 +66,95 @@ There are two ways:
 Via SSH
 
 ```
-$ git clone ssh://user@domain.com/repo.git
+git clone ssh://user@domain.com/repo.git
 ```
 
 Via HTTP
 
 ```
-$ git clone http://domain.com/user/repo.git
+git clone http://domain.com/user/repo.git
 ```
 
 ##### Create a new local repository in the current directory:
 ```
-$ git init
+git init
 ```
 
 ##### Create a new local repository in a specific directory:
 ```
-$ git init <directory>
+git init <directory>
 ```
 
-<hr>
 
 ## Local Changes
 
 ##### Changes in working directory:
 ```
-$ git status
+git status
 ```
 
 ##### Changes to tracked files:
 ```
-$ git diff
+git diff
 ```
 
 ##### See changes/difference of a specific file:
 ```
-$ git diff <file>
+git diff <file>
 ```
 
 ##### Add all current changes to the next commit:
 ```
-$ git add .
+git add .
 ```
 
 ##### Add some changes in &lt;file&gt; to the next commit:
 ```
-$ git add -p <file>
+git add -p <file>
 ```
 
 ##### Add only the mentioned files to the next commit:
 ```
-$ git add <filename1> <filename2>
+git add <filename1> <filename2>
 ```
 
 ##### Commit all local changes in tracked files:
 ```
-$ git commit -a
+git commit -a
 ```
 
 ##### Commit previously staged changes:
 ```
-$ git commit
+git commit
 ```
 
 ##### Commit with message:
 ```
-$ git commit -m 'message here'
+git commit -m 'message here'
 ```
 
 ##### Commit skipping the staging area and adding message:
 ```
-$ git commit -am 'message here'
+git commit -am 'message here'
 ```
 
 ##### Commit to some previous date:
 ```
-$ git commit --date="`date --date='n day ago'`" -am "<Commit Message Here>"
+git commit --date="`date --date='n day ago'`" -am "<Commit Message Here>"
 ```
 
-##### Change last commit:<br>
-<em><sub>Don't amend published commits!</sub></em>
+##### Change last commit:
+Don't amend published commits!
 
 ```
-$ git commit -a --amend
+git commit -a --amend
 ```
 
 ##### Amend with last commit but use the previous commit log message
-<em><sub>Don't amend published commits!</sub></em>
+Don't amend published commits!
 
 ```shell
-$ git commit --amend --no-edit
+git commit --amend --no-edit
 ```
 
 ##### Change committer date of last commit:
@@ -174,101 +164,98 @@ GIT_COMMITTER_DATE="date" git commit --amend
 
 ##### Change Author date of last commit:
 ```shell
-$ git commit --amend --date="date"
+git commit --amend --date="date"
 ```
 
-##### Move uncommitted changes from current branch to some other branch:<br>
+##### Move uncommitted changes from current branch to some other branch:
 ```
-$ git stash
-$ git checkout branch2
-$ git stash pop
+git stash
+git checkout branch2
+git stash pop
 ```
 
 ##### Restore stashed changes back to current branch:
 ```shell
-$ git stash apply
+git stash apply
 ```
 
 #### Restore particular stash back to current branch:
 - *{stash_number}* can be obtained from `git stash list`
 
 ```shell
-$ git stash apply stash@{stash_number}
+git stash apply stash@{stash_number}
 ```
 
 ##### Remove the last set of stashed changes:
 ```
-$ git stash drop
+git stash drop
 ```
 
-<hr>
 
 ## Search
 
 ##### A text search on all files in the directory:
 ```
-$ git grep "Hello"
+git grep "Hello"
 ```
 
 ##### In any version of a text search:
 ```
-$ git grep "Hello" v2.5
+git grep "Hello" v2.5
 ```
 
 ##### Show commits that introduced a specific keyword
 ```
-$ git log -S 'keyword'
+git log -S 'keyword'
 ```
 
 ##### Show commits that introduced a specific keyword (using a regular expression)
 ```
-$ git log -S 'keyword' --pickaxe-regex
+git log -S 'keyword' --pickaxe-regex
 ```
 
-<hr>
 
 ## Commit History
 
 ##### Show all commits, starting with newest (it'll show the hash, author information, date of commit and title of the commit):
 ```
-$ git log
+git log
 ```
 
 ##### Show all the commits(it'll show just the commit hash and the commit message):
 ```
-$ git log --oneline
+git log --oneline
 ```
 
 ##### Show all commits of a specific user:
 ```
-$ git log --author="username"
+git log --author="username"
 ```
 
 ##### Show changes over time for a specific file:
 ```
-$ git log -p <file>
+git log -p <file>
 ```
 
 ##### Display commits that are present only in remote/branch in right side
 ```
-$ git log --oneline <origin/master>..<remote/master> --left-right
+git log --oneline <origin/master>..<remote/master> --left-right
 ```
 
 ##### Who changed, what and when in &lt;file&gt;:
 ```
-$ git blame <file>
+git blame <file>
 ```
 
 ##### Show Reference log:
 ```
-$ git reflog show
+git reflog show
 ```
 
 ##### Delete Reference log:
 ```
-$ git reflog delete
+git reflog delete
 ```
-<hr>
 
 ## Move, Rename
 
@@ -277,85 +264,83 @@ $ git reflog delete
 Rename Index.txt to Index.html
 
 ```
-$ git mv Index.txt Index.html
+git mv Index.txt Index.html
 ```
-
-<hr>
 
 ## Branches, Tags
 
 ##### List all local branches:
 ```
-$ git branch
+git branch
 ```
 
 #### List local/remote branches
 ```
-$ git branch -a
+git branch -a
 ```
 
 ##### List all remote branches:
 ```
-$ git branch -r
+git branch -r
 ```
 
 ##### Switch HEAD branch:
 ```
-$ git checkout <branch>
+git checkout <branch>
 ```
 
 ##### Checkout single file from different branch
 ```
-$ git checkout <branch> -- <filename>
+git checkout <branch> -- <filename>
 ```
 
 ##### Create and switch new branch:
 ```
-$ git checkout -b <branch>
+git checkout -b <branch>
 ```
 
 ##### Switch to the previous branch, without saying the name explicitly:
 ```
-$ git checkout -
+git checkout -
 ```
 
 ##### Create a new branch from an exiting branch and switch to new branch:
 ```
-$ git checkout -b <new_branch> <existing_branch>
+git checkout -b <new_branch> <existing_branch>
 ```
 
 
 #### Checkout and create a new branch from existing commit
 ```
-$ git checkout <commit-hash> -b <new_branch_name>
+git checkout <commit-hash> -b <new_branch_name>
 ```
 
 
 ##### Create a new branch based on your current HEAD:
 ```
-$ git branch <new-branch>
+git branch <new-branch>
 ```
 
 ##### Create a new tracking branch based on a remote branch:
 ```
-$ git branch --track <new-branch> <remote-branch>
+git branch --track <new-branch> <remote-branch>
 ```
 
 ##### Delete a local branch:
 ```
-$ git branch -d <branch>
+git branch -d <branch>
 ```
 
 ##### Rename current branch to new branch name
 ```shell
-$ git branch -m <new_branch_name>
+git branch -m <new_branch_name>
 ```
 
 ##### Force delete a local branch:
-<em><sub>You will lose unmerged changes!</sub></em>
+You will lose unmerged changes!
 
 ```
-$ git branch -D <branch>
+git branch -D <branch>
 ```
 ##### Apply specific commit from another branch:
 ```
@@ -364,151 +349,150 @@ git cherry-pick <commit hash>
 
 ##### Mark `HEAD` with a tag:
 ```
-$ git tag <tag-name>
+git tag <tag-name>
 ```
 
 ##### Mark `HEAD` with a tag and open the editor to include a message:
 ```
-$ git tag -a <tag-name>
+git tag -a <tag-name>
 ```
 
 ##### Mark `HEAD` with a tag that includes a message:
 ```
-$ git tag <tag-name> -am 'message here'
+git tag <tag-name> -am 'message here'
 ```
 
 ##### List all tags:
 ```
-$ git tag
+git tag
 ```
 
 ##### List all tags with their messages (tag message or commit message if tag has no message):
 ```
-$ git tag -n
+git tag -n
 ```
 
-<hr>
 
 ## Update, Publish
 
 ##### List all current configured remotes:
 ```
-$ git remote -v
+git remote -v
 ```
 
 ##### Show information about a remote:
 ```
-$ git remote show <remote>
+git remote show <remote>
 ```
 
 ##### Add new remote repository, named &lt;remote&gt;:
 ```
-$ git remote add <remote> <url>
+git remote add <remote> <url>
 ```
 
 ##### Rename a remote repository, from &lt;remote&gt; to &lt;new_remote&gt;:
 ```
-$ git remote rename <remote> <new_remote>
+git remote rename <remote> <new_remote>
 ```
 
 ##### Remove a remote:
 ```
-$ git remote rm <remote>
+git remote rm <remote>
 ```
 
-<em><sub>Note: git remote rm does not delete the remote repository from the server. It simply removes the remote and its references from your local repository.</sub></em>
+Note: git remote rm does not delete the remote repository from the server. It simply removes the remote and its references from your local repository.
 
 ##### Download all changes from &lt;remote&gt;, but don't integrate into HEAD:
 ```
-$ git fetch <remote>
+git fetch <remote>
 ```
 
 ##### Download changes and directly merge/integrate into HEAD:
 ```
-$ git remote pull <remote> <url>
+git remote pull <remote> <url>
 ```
 
 ##### Get all changes from HEAD to local repository:
 ```
-$ git pull origin master
+git pull origin master
 ```
 
 ##### Get all changes from HEAD to local repository without a merge:
 ```
-$ git pull --rebase <remote> <branch>
+git pull --rebase <remote> <branch>
 ```
 
 ##### Publish local changes on a remote:
 ```
-$ git push <remote> <branch>
+git push <remote> <branch>
 ```
 
 ##### Delete a branch on the remote:
 ```
-$ git push <remote> :<branch> (since Git v1.5.0)
+git push <remote> :<branch> (since Git v1.5.0)
 ```
 OR
 ```
-$ git push <remote> --delete <branch> (since Git v1.7.0)
+git push <remote> --delete <branch> (since Git v1.7.0)
 ```
 
 ##### Publish your tags:
 ```
-$ git push --tags
+git push --tags
 ```
 <hr>
 
 #### Configure the merge tool globally to meld (editor)
 ```bash
-$ git config --global merge.tool meld
+git config --global merge.tool meld
 ```
 
 ##### Use your configured merge tool to solve conflicts:
 ```
-$ git mergetool
+git mergetool
 ```
 
 ## Merge, Rebase
 
 ##### Merge branch into your current HEAD:
 ```
-$ git merge <branch>
+git merge <branch>
 ```
 
 #### List merged branches
 ```
-$ git branch --merged
+git branch --merged
 ```
 
 ##### Rebase your current HEAD onto &lt;branch&gt;:<br>
-<em><sub>Don't rebase published commit!</sub></em>
+Don't rebase published commit!
 
 ```
-$ git rebase <branch>
+git rebase <branch>
 ```
 
 ##### Abort a rebase:
 ```
-$ git rebase --abort
+git rebase --abort
 ```
 
 ##### Continue a rebase after resolving conflicts:
 ```
-$ git rebase --continue
+git rebase --continue
 ```
 
 ##### Use your editor to manually solve conflicts and (after resolving) mark file as resolved:
 ```
-$ git add <resolved-file>
+git add <resolved-file>
 ```
 
 ```
-$ git rm <resolved-file>
+git rm <resolved-file>
 ```
 
 ##### Squashing commits:
 ```
-$ git rebase -i <commit-just-before-first>
+git rebase -i <commit-just-before-first>
 ```
 
 Now replace this,
@@ -526,54 +510,52 @@ pick <commit_id>
 squash <commit_id2>
 squash <commit_id3>
 ```
-<hr>
 
 ## Undo
 
 ##### Discard all local changes in your working directory:
 ```
-$ git reset --hard HEAD
+git reset --hard HEAD
 ```
 
 ##### Get all the files out of the staging area(i.e. undo the last `git add`):
 ```
-$ git reset HEAD
+git reset HEAD
 ```
 
 ##### Discard local changes in a specific file:
 ```
-$ git checkout HEAD <file>
+git checkout HEAD <file>
 ```
 
 ##### Revert a commit (by producing a new commit with contrary changes):
 ```
-$ git revert <commit>
+git revert <commit>
 ```
 
 ##### Reset your HEAD pointer to a previous commit and discard all changes since then:
 ```
-$ git reset --hard <commit>
+git reset --hard <commit>
 ```
 
 ##### Reset your HEAD pointer to a remote branch current state.
 ```
-$ git reset --hard <remote/branch> e.g., upstream/master, origin/my-feature
+git reset --hard <remote/branch> e.g., upstream/master, origin/my-feature
 ```
 
 ##### Reset your HEAD pointer to a previous commit and preserve all changes as unstaged changes:
 ```
-$ git reset <commit>
+git reset <commit>
 ```
 
 ##### Reset your HEAD pointer to a previous commit and preserve uncommitted local changes:
 ```
-$ git reset --keep <commit>
+git reset --keep <commit>
 ```
 
 ##### Remove files that were accidentally committed before they were added to .gitignore
 ```
-$ git rm -r --cached .
-$ git add .
-$ git commit -m "remove xyz file"
+git rm -r --cached .
+git add .
+git commit -m "remove xyz file"
 ```
-<hr>

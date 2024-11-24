@@ -1,0 +1,46 @@
+/* FloatingMenu.css */
+.floating-menu {
+    position: fixed;
+    top: 20%;
+    left: 10px;
+    width: 250px; 
+    height: 400px; 
+    background-image: url('../public/background.jpg');
+    background-size: cover; 
+    background-size: 100% 100%;
+    background-position: top center; 
+    background-repeat: no-repeat; 
+    padding-top: 60px; 
+    padding-left: 0px; 
+    padding-right: 0px; 
+    padding-bottom: 10px; 
+    border-radius: 10px; 
+    color: rgba(255, 255, 255, 0); 
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    overflow-y: auto; 
+  }
+  
+  .floating-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .floating-menu ul li {
+    margin: 10px 0;
+  }
+  
+  .floating-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .floating-menu ul li a:hover {
+    color: #ff66cc;
+  }
+  

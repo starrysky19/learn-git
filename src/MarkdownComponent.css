@@ -1,0 +1,120 @@
+/* Container for the markdown */
+.markdown-main {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+/* Headings */
+/* MarkdownComponent.css */
+
+/* Style for h2 (## Setup) */
+.markdown-main h2 {
+  font-family: 'Arial', sans-serif; /* Change to any font you like */
+  font-size: 2rem; /* Adjust the size as needed */
+  font-weight: bold;
+  color: #2c3e50; /* Dark color for the title */
+  margin-bottom: 20px; /* Space below the title */
+}
+
+/* Style for h5 (##### Show current configuration) */
+.markdown-main h5 {
+  font-family: 'Courier New', Courier, monospace; /* You can use a different font */
+  font-size: 1.25rem; /* Adjust the size for smaller headings */
+  font-weight: normal; /* Lighter font weight for h5 */
+  color: #7f8c8d; /* Lighter color for less emphasis */
+  margin-bottom: 15px; /* Space below the h5 */
+}
+
+.markdown-main h1, 
+.markdown-main h3, 
+.markdown-main h4, 
+.markdown-main h6 {
+  //color: #2c3e50;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Links */
+.markdown-main a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.markdown-main a:hover {
+  text-decoration: underline;
+}
+
+/* Paragraphs */
+.markdown-main p {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+/* Code block styling */
+.markdown-main pre {
+  background-color: #e88ec8;
+  color: white;
+  padding: 10px;
+  border-radius: 1px;
+  font-family: 'Courier New', Courier, monospace;
+  overflow-x: auto;
+}
+
+.markdown-main code {
+  background-color: #f4f4f4;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* Lists */
+.markdown-main ul, 
+.markdown-main ol {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.markdown-main li {
+  font-size: 1.1em;
+}
+
+/* Blockquotes */
+.markdown-main blockquote {
+  border-left: 5px solid #3498db;
+  padding-left: 15px;
+  margin-left: 0;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+/* Tables */
+.markdown-main table {
+  width: 100%;
+  margin-bottom: 15px;
+  border-collapse: collapse;
+}
+
+.markdown-main th, 
+.markdown-main td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.markdown-main th {
+  background-color: #3498db;
+  color: white;
+}
+
+/* Checkboxes */
+.markdown-main input[type="checkbox"] {
+  margin-right: 10px;
+}

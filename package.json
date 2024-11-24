@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.21.0",
     "@highlightjs/cdn-assets": "^11.10.0",
-    "highlight.js": "^11.10.0",
+    "highlight.js": "^10.7.3",
     "html-react-parser": "^5.1.12",
     "marked": "^0.7.0",
     "prismjs": "^1.29.0",
@@ -12,8 +13,8 @@
     "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18.3.1",
     "react-markdown": "^9.0.1",
-    "react-scripts": "^0.9.5",
-    "react-syntax-highlighter": "^15.5.0",
+    "react-scripts": "^5.0.1",
+    "react-syntax-highlighter": "^15.6.1",
     "rehype-raw": "^7.0.0",
     "remark": "^15.0.1",
     "remark-gfm": "^4.0.0",
@@ -29,5 +30,17 @@
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.4",
     "@babel/preset-react": "^7.24.7"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

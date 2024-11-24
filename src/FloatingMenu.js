@@ -1,4 +1,5 @@
 import React from 'react';
+import './FloatingMenu.css'; // Make sure to import the CSS file
 
 function FloatingMenu() {
   return (
